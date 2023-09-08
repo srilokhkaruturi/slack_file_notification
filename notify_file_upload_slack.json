@@ -1,0 +1,49 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "Post_message_(V2)": {
+                "inputs": {
+                    "body": {
+                        "channel": "C05S5K16D40",
+                        "text": "New file"
+                    },
+                    "host": {
+                        "connection": {
+                            "referenceName": "slack"
+                        }
+                    },
+                    "method": "post",
+                    "path": "/v2/chat.postMessage"
+                },
+                "runAfter": {},
+                "type": "ApiConnection"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "triggers": {
+            "When_a_file_is_created": {
+                "inputs": {
+                    "host": {
+                        "connection": {
+                            "referenceName": "slack"
+                        }
+                    },
+                    "method": "get",
+                    "path": "/trigger/files.list",
+                    "queries": {
+                        "channel": "C05S5K16D40"
+                    }
+                },
+                "recurrence": {
+                    "frequency": "Second",
+                    "interval": 5
+                },
+                "splitOn": "@triggerBody()",
+                "type": "ApiConnection"
+            }
+        }
+    },
+    "kind": "Stateful"
+}
