@@ -1,5 +1,6 @@
 
-<img width="661" alt="Screenshot 2023-09-07 at 11 56 31 AM" src="https://github.com/srilokhkaruturi/slack_file_notification/assets/75606167/6fc62010-4241-4d69-aadf-35dcee9cb98d">
+<img width="417" alt="Screenshot 2023-09-08 at 10 24 51 AM" src="https://github.com/srilokhkaruturi/slack_file_notification/assets/75606167/30a69420-effc-4026-8e98-f23713a065b1">
+
 
 https://github.com/srilokhkaruturi/slack_file_notification/assets/75606167/8fdad1c7-50da-4252-adc2-1a9f5e91a169
 
